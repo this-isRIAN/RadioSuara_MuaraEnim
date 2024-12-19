@@ -64,9 +64,9 @@ body{
   }
 
 img{
-    width: 5px; 
-    height: 90px; 
-    object-fit: cover;
+    width: 90px; 
+    height: 150px; 
+    object-fit: contain;
 }
 .penyiar-section {
     background-image: url('img/23.png');
