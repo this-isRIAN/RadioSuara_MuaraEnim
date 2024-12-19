@@ -137,7 +137,7 @@ nav{
 /* Efek Hover untuk Program dan Penyiar */
 .program-card, .penyiar-card {
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
