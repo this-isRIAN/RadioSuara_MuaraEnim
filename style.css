@@ -64,8 +64,8 @@ body{
   }
 
 img{
-    width: 250px; 
-    height: 250px; 
+    width: 50px; 
+    height: 150px; 
     object-fit: contain;
 }
 .penyiar-section {
@@ -137,7 +137,7 @@ nav{
 /* Efek Hover untuk Program dan Penyiar */
 .program-card, .penyiar-card {
     overflow: hidden;
-    border-radius: 50px;
+    border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -186,107 +186,19 @@ nav{
     margin-bottom: 20px;
 }
 
+.penyiar-card {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
 .penyiar-img {
     width: 100%;
     height: auto;
     object-fit: cover;
     max-height: 300px;
 }
-@media (max-width: 768px) {
-    body {
-        padding-top: 56px; /* Sesuaikan padding top agar tidak menutupi konten */
-    }
 
-    /* Tumpuk kolom di bawah satu sama lain untuk layout program dan penyiar */
-    .col-md-4, .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .program-card, .penyiar-card {
-        margin-bottom: 20px;
-    }
-
-    /* Pastikan gambar penyiar tidak terlalu besar di mobile */
-    .penyiar-img {
-        max-height: 200px;
-    }
-
-    /* Sesuaikan tinggi banner pada mobile */
-    .container-fluid.banner {
-        padding-top: 20px;
-        padding-bottom: 40px;
-    }
-
-    /* Kurangi ukuran font untuk teks besar */
-    .display-1, .display-6 {
-        font-size: 2.5rem;
-    }
-
-    .display-3 {
-        font-size: 2rem;
-    }
-
-    /* Album Prestasi responsif */
-    .album-prestasi {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    /* Perkecil ukuran kontak di mobile */
-    .kontak {
-        padding-bottom: 10%;
-        padding-top: 10%;
-    }
-}
-.penyiar-img {
-    max-height: 200px; /* Sesuaikan maksimal tinggi gambar penyiar di mobile */
-}
-.banner {
-    padding-top: 50px;
-    padding-bottom: 10%;
-}
-
-@media (max-width: 768px) {
-    .banner {
-        padding-top: 20px;
-        padding-bottom: 20%;
-    }
-}
-.album-prestasi {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-}
-
-.album-prestasi .prestasi-item {
-    border-radius: 10px;
-    overflow: hidden;
-}
-@media (max-width: 768px) {
-    .navbar-brand img {
-        width: 150px; /* Sesuaikan ukuran logo di mobile */
-    }
-}
-.penyiar-card {
-    width: 100%;
-    max-width: 250px; /* Batasi lebar kartu di layar kecil */
-    text-align: center;
-    margin: 0 auto;
-}
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* Rasio aspek 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.video-wrapper video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 
 
