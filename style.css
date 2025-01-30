@@ -1,34 +1,200 @@
-/* Pastikan tinggi card seragam */
-.program-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 450px; /* Sesuaikan tinggi agar semua sama */
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans',sans-serif;
+    background-color: #f8f9fa;
+    background-size: auto;
+    padding-top: 56px;
+    
+}
+.container {
+    margin-top: 0px;
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
 }
 
-/* Pastikan .card-body mengisi ruang kosong */
-.program-card .card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+@keyframes slideInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+.display-1, .display-6{
+    animation: slideInOut 7s ease-in-out infinite;
 }
 
-/* Pastikan gambar dalam program memiliki ukuran yang sama */
-.program-card .program-img {
+.display-3{
+    animation: slideInOut 7s ease-in-out infinite;
+}
+.display-6, .display-1, .display-3 {
+    font-family: "Baskervville SC", serif; /* Ganti 'YourFontFamily' dengan nama font yang inginkan*/
+    font-size: 2.5rem; /* Atur ukuran font sesuai kebutuhan */
+  }
+  
+  .display-1 {
+    font-size: 4rem; /* ukuran khusus untuk display-1 */
+  }
+  
+  .display-3 {
+    font-size: 3rem; /* ukuran khusus untuk display-3 */
+  }
+
+img{
+    width: 50px; 
+    height: 150px; 
+    object-fit: contain;
+}
+.penyiar-section {
+    background-image: url('img/23.png');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 5%;
+    padding-top: 1%;
+    color: #fff;
+  }
+.prestasi-img {
     width: 100%;
-    height: 200px; /* Atur tinggi gambar agar seragam */
-    object-fit: cover; /* Menjaga proporsi gambar */
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+nav{
+    width: 100%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #FFFFFF;
+}
+.navbar{
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* Container untuk album foto prestasi */
+.album-prestasi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
 }
 
-/* Buat kolom tetap sejajar dengan Grid Bootstrap */
-.program-container .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+/* Style untuk setiap foto prestasi */
+.album-prestasi .prestasi-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
-.program-container .col-md-6 {
+.album-prestasi .prestasi-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.album-prestasi .prestasi-item:hover {
+    transform: scale(1.05);
+}
+
+.album-prestasi .prestasi-item:hover img {
+    transform: scale(1.1);
+}
+
+.album-prestasi .prestasi-caption {
+    padding: 10px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+/* Efek Hover untuk Program dan Penyiar */
+.program-card, .penyiar-card {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-card:hover, .penyiar-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.program-card img, .penyiar-card img {
+    transition: transform 0.3s;
+}
+
+.program-card:hover img, .penyiar-card:hover img {
+    transform: scale(1.1);
+}
+.kontak{
+    background: url('img/23.png') no-repeat center center;
+    background-size: cover;
+    padding-bottom: 20%;
+    padding-top: 20%;
+    color: #fff;
+}
+.container-fluid.banner{
+    padding-top: 50px;
+}
+.banner{
+    background : url('img/BG\ BG.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 20%;
+    color: #fff;
+    margin-top: 60px;
+
+}
+.card-text {
+    margin-bottom: 1px;
+}
+.row.mt-4 {
     display: flex;
+    justify-content: center;
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.penyiar-card {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.penyiar-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 300px;
 }
