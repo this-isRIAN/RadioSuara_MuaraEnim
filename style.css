@@ -210,7 +210,11 @@ nav{
     flex-direction: column;
     justify-content: space-between; /* Menyamakan tinggi konten */
 }
-
+.program-img {
+    width: 100%;
+    height: 200px; /* Sesuaikan tinggi gambar agar semua sama */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
 
 
 
