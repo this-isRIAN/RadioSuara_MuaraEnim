@@ -199,16 +199,17 @@ nav{
     max-height: 300px;
 }
 .program-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    min-height: 400px; /* Sesuaikan dengan tinggi card yang paling tinggi */
 }
-
 .program-card .card-body {
-    flex-grow: 1; /* Memastikan card-body mengisi sisa ruang */
+    flex-grow: 1; /* Memastikan tinggi setiap card-body seragam */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Menyamakan tinggi konten */
+    justify-content: space-between;
 }
 .program-img {
     width: 100%;
