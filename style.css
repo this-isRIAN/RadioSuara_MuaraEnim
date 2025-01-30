@@ -213,8 +213,8 @@ nav{
 }
 .program-img {
     width: 100%;
-    height: 400px; /* Sesuaikan tinggi gambar agar semua sama */
-    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    height: 200px; /* Sesuaikan tinggi gambar agar semua sama */
+    object-fit: contain; /* Memastikan gambar tidak terdistorsi */
 }
 
 
